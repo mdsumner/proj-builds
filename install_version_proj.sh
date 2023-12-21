@@ -57,7 +57,8 @@ apt-get install -y --fix-missing --no-install-recommends \
     libsqlite3-dev \
     libssl-dev \
     libtiff5-dev \
-    sqlite3
+    sqlite3 \
+    wget
 
     # libarchive-dev \
     # libarmadillo-dev \
