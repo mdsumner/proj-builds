@@ -60,61 +60,9 @@ apt-get install -y --fix-missing --no-install-recommends \
     sqlite3 \
     wget
 
-    # libarchive-dev \
-    # libarmadillo-dev \
-    # libblosc-dev \
-    # libboost-dev \
-    # libbz2-dev \
-    # libcairo2-dev \
-    # libclc-15-dev \
-    # libcfitsio-dev \
-
-    # libdeflate-dev \
-    # libexpat-dev \
-    # libfreexl-dev \
-    # libfyba-dev \
-    # libgif-dev \
-    # libheif-dev \
-    # libhdf4-alt-dev \
-    # libhdf5-serial-dev \
-    # libjpeg-dev \
-    # libkml-dev \
-    # liblcms2-2 \
-    # liblerc-dev \
-    # liblz4-dev \
-    # liblzma-dev \
-    # libmysqlclient-dev \
-    # libnetcdf-dev \
-    # libogdi-dev \
-    # libopenexr-dev \
-    # libopenjp2-7-dev \
-    # libpcre3-dev \
-    # libpng-dev \
-    # libpq-dev \
-    # libpoppler-dev \
-    # libpoppler-private-dev \
-    # libqhull-dev \
-
-    # libudunits2-dev \
-    # libwebp-dev \
-    # libxerces-c-dev \
-    # libxml2-dev \
-    # lsb-release \
-    # make \
-    # mdbtools-dev \
-    # pkg-config \
-    # python3-dev \
-    # python3-numpy \
-    # python3-setuptools \
-#    swig \
-#    unixodbc-dev \
-#    wget \
-#    zlib1g-dev
 
 rm -rf /build_local
 mkdir /build_local && cd /build_local
-
-
 
 ## purge existing directories to permit re-run of script with updated versions
 rm -rf  proj*
