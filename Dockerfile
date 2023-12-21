@@ -1,4 +1,4 @@
-FROM ubuntu/latest
+FROM ubuntu:latest
 
 LABEL org.opencontainers.image.licenses="GPL-2.0-or-later" \
       org.opencontainers.image.source="https://github.com/mdsumner/proj-builds" \
