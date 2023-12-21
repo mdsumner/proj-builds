@@ -2,7 +2,7 @@ name: Docker Image CI
 on:
   workflow_dispatch: null
   push:
-    paths: ['Dockerfile', '.github/workflows/docker.yml']
+    paths: ['Dockerfile', '.github/workflows/docker.yml', 'install_version_proj.sh']
 jobs:
   build:
     runs-on: ubuntu-latest
