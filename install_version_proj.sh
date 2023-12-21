@@ -52,12 +52,12 @@ apt-get install -y --fix-missing --no-install-recommends \
     cmake \
     curl \
     git \
-        libcrypto++-dev \
+    libcrypto++-dev \
     libcurl4-openssl-dev \
-        libsqlite3-dev \
+    libsqlite3-dev \
     libssl-dev \
     libtiff5-dev \
-        sqlite3
+    sqlite3
 
     # libarchive-dev \
     # libarmadillo-dev \
