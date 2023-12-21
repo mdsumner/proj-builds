@@ -16,15 +16,27 @@ jobs:
           registry: ghcr.io
           username: ${{github.actor}}
           password: ${{secrets.GITHUB_TOKEN}}
-      - name: Build the Docker image
+      - name: Build the (latest) Docker image
         if: github.repository == 'mdsumner/proj-builds'
         run: docker build . --tag ghcr.io/mdsumner/proj-builds:latest
-      - name: Publish
+      - name: Publish (latest)
         if: github.repository == 'mdsumner/proj-builds'
         run: docker push ghcr.io/mdsumner/proj-builds:latest
       - name: Build the 8.2.1 Docker image
         if: github.repository == 'mdsumner/proj-builds'
         run: docker build -f proj_8.2.1.Dockerfile . --tag ghcr.io/mdsumner/proj-builds:8.2.1
-      - name: Publish
+      - name: Publish 8.2.1
         if: github.repository == 'mdsumner/proj-builds'
         run: docker push ghcr.io/mdsumner/proj-builds:8.2.1
+      - name: Build the 7.2.1 Docker image
+        if: github.repository == 'mdsumner/proj-builds'
+        run: docker build -f proj_7.2.1.Dockerfile . --tag ghcr.io/mdsumner/proj-builds:7.2.1
+      - name: Publish 7.2.1
+        if: github.repository == 'mdsumner/proj-builds'
+        run: docker push ghcr.io/mdsumner/proj-builds:7.2.1
+      - name: Build the 6.3.2 Docker image
+        if: github.repository == 'mdsumner/proj-builds'
+        run: docker build -f proj_6.3.2.Dockerfile . --tag ghcr.io/mdsumner/proj-builds:6.3.2
+      - name: Publish
+        if: github.repository == 'mdsumner/proj-builds'
+        run: docker push ghcr.io/mdsumner/proj-builds:6.3.2
