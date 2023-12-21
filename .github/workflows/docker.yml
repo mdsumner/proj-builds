@@ -22,3 +22,9 @@ jobs:
       - name: Publish
         if: github.repository == 'mdsumner/proj-builds'
         run: docker push ghcr.io/mdsumner/proj-builds:latest
+      - name: Build the 8.2.1 Docker image
+        if: github.repository == 'mdsumner/proj-builds'
+        run: docker build -f proj_8.2.1.Dockerfile . --tag ghcr.io/mdsumner/proj-builds:8.2.1
+      - name: Publish
+        if: github.repository == 'mdsumner/proj-builds'
+        run: docker push ghcr.io/mdsumner/proj-builds:8.2.1
