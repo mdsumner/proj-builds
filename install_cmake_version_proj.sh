@@ -71,12 +71,18 @@ rm -rf  proj*
 # https://download.osgeo.org/proj/
 if [ "$PROJ_VERSION" = "latest" ]; then
     PROJ_DL_URL=$(url_latest_gh_released_asset "OSGeo/PROJ")
+elif [ "$PROJ_VERSION" = "master" ]; then
+    PROJ_DL_URL="https://github.com/OSGEO/proj/archive/master.tar.gz"
 else
     PROJ_DL_URL="https://download.osgeo.org/proj/proj-${PROJ_VERSION}.tar.gz"
 fi
 
 wget "$PROJ_DL_URL" -O proj.tar.gz
 tar zxvf proj.tar.gz
+## when we got the latest source tarball
+if [ -d 'PROJ-master' ]; then
+     mv PROJ-master proj-master
+fi
 rm proj.tar.gz
 cd proj-*
 mkdir build
