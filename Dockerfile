@@ -7,6 +7,6 @@ LABEL org.opencontainers.image.licenses="GPL-2.0-or-later" \
 
 ENV PROJ_VERSION=latest
 
-COPY install_version_proj.sh /install_version_proj.sh
+COPY install_cmake_version_proj.sh /scripts/install_cmake_version_proj.sh
 
-RUN /install_version_proj.sh
+RUN /scripts/install_cmake_version_proj.sh
