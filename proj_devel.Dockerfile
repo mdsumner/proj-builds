@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.licenses="GPL-2.0-or-later" \
       org.opencontainers.image.vendor="Hypertidy Project" \
       org.opencontainers.image.authors="Michael Sumner <mdsumner@gmail.com>"
 
-ENV PROJ_VERSION=master
+ENV PROJ_VERSION=devel
 
 COPY install_cmake_version_proj.sh /scripts/install_cmake_version_proj.sh
 

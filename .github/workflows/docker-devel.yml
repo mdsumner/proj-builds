@@ -1,8 +1,8 @@
-name: Docker Image CI
+name: Docker Image CI - devel (latest commit)
 on:
   workflow_dispatch: null
   push:
-    paths: ['Dockerfile', '.github/workflows/docker.yml', 'install_version_proj.sh']
+    paths: ['Dockerfile', '.github/workflows/docker-devel.yml', 'install_version_proj.sh']
 jobs:
   build:
     runs-on: ubuntu-latest
