@@ -9,8 +9,6 @@ NCPUS=${NCPUS:-"-1"}
 
 PROJ_VERSION=${PROJ_VERSION:-"latest"}
 
-CRAN_SOURCE=${CRAN_SOURCE:-"https://cloud.r-project.org"}
-echo "options(repos = c(CRAN = '${CRAN}'))" >>"${R_HOME}/etc/Rprofile.site"
 
 # cmake does not understand "-1" as "all cpus"
 CMAKE_CORES=${NCPUS}
