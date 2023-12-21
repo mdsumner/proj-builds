@@ -9,7 +9,6 @@ NCPUS=${NCPUS:-"-1"}
 
 PROJ_VERSION=${PROJ_VERSION:-"latest"}
 
-
 # cmake does not understand "-1" as "all cpus"
 CMAKE_CORES=${NCPUS}
 if [ "${CMAKE_CORES}" = "-1" ]; then
