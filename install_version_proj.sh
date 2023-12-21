@@ -52,6 +52,13 @@ apt-get install -y --fix-missing --no-install-recommends \
     cmake \
     curl \
     git \
+        libcrypto++-dev \
+    libcurl4-openssl-dev \
+        libsqlite3-dev \
+    libssl-dev \
+    libtiff5-dev \
+        sqlite3
+
     # libarchive-dev \
     # libarmadillo-dev \
     # libblosc-dev \
@@ -60,8 +67,7 @@ apt-get install -y --fix-missing --no-install-recommends \
     # libcairo2-dev \
     # libclc-15-dev \
     # libcfitsio-dev \
-    libcrypto++-dev \
-    libcurl4-openssl-dev \
+
     # libdeflate-dev \
     # libexpat-dev \
     # libfreexl-dev \
@@ -87,9 +93,7 @@ apt-get install -y --fix-missing --no-install-recommends \
     # libpoppler-dev \
     # libpoppler-private-dev \
     # libqhull-dev \
-    libsqlite3-dev \
-    libssl-dev \
-    libtiff5-dev \
+
     # libudunits2-dev \
     # libwebp-dev \
     # libxerces-c-dev \
@@ -101,7 +105,6 @@ apt-get install -y --fix-missing --no-install-recommends \
     # python3-dev \
     # python3-numpy \
     # python3-setuptools \
-    sqlite3
 #    swig \
 #    unixodbc-dev \
 #    wget \
