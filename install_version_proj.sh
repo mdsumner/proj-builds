@@ -145,5 +145,5 @@ rm -rf /tmp/downloaded_packages
 # Check the geospatial packages
 
 echo -e "Check proj package...\n"
-proj --version
+proj
 echo -e "\nInstall PROJ, done!"
