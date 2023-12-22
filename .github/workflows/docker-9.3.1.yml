@@ -2,7 +2,7 @@ name: Docker Image CI - 9.3.1
 on:
   workflow_dispatch: null
   push:
-    paths: ['proj_9.3.1.Dockerfile', '.github/workflows/docker-9.3.1.yml', 'install_cmake_version_proj.sh']
+    paths: ['dockerfiles/proj_9.3.1.Dockerfile', '.github/workflows/docker-9.3.1.yml', 'install_cmake_version_proj.sh']
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,7 +18,7 @@ jobs:
           password: ${{secrets.GITHUB_TOKEN}}
       - name: Build the (9.3.1) Docker image
         if: github.repository == 'mdsumner/proj-builds'
-        run: docker build -f proj_9.3.1.Dockerfile . --tag ghcr.io/mdsumner/proj-builds:9.3.1
+        run: docker build -f dockerfiles/proj_9.3.1.Dockerfile . --tag ghcr.io/mdsumner/proj-builds:9.3.1
       - name: Publish (9.3.1)
         if: github.repository == 'mdsumner/proj-builds'
         run: docker push ghcr.io/mdsumner/proj-builds:9.3.1

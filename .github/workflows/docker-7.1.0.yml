@@ -2,7 +2,7 @@ name: Docker Image CI - 7.1.0
 on:
   workflow_dispatch: null
   push:
-    paths: ['proj_7.1.0.Dockerfile', '.github/workflows/docker-7.1.0.yml', 'install_cmake_version_proj.sh']
+    paths: ['dockerfiles/proj_7.1.0.Dockerfile', '.github/workflows/docker-7.1.0.yml', 'install_cmake_version_proj.sh']
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,7 +18,7 @@ jobs:
           password: ${{secrets.GITHUB_TOKEN}}
       - name: Build the (7.1.0) Docker image
         if: github.repository == 'mdsumner/proj-builds'
-        run: docker build -f proj_7.1.0.Dockerfile . --tag ghcr.io/mdsumner/proj-builds:7.1.0
+        run: docker build -f dockerfiles/proj_7.1.0.Dockerfile . --tag ghcr.io/mdsumner/proj-builds:7.1.0
       - name: Publish (7.1.0)
         if: github.repository == 'mdsumner/proj-builds'
         run: docker push ghcr.io/mdsumner/proj-builds:7.1.0

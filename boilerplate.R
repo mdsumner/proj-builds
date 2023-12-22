@@ -4,14 +4,14 @@ label <- c("6.0.0", "6.1.0", "6.1.1", "6.2.0", "6.2.1", "6.3.0", "6.3.1",
 "9.0.1", "9.1.0", "9.1.1", "9.2.0", "9.2.1", "9.3.0", "9.3.1", "latest", "devel")
 
 yamlfile_path   <- ".github/workflows/docker-%s.yml"
-dockerfile_path <- "proj_%s.Dockerfile"
+dockerfile_path <- "dockerfiles/proj_%s.Dockerfile"
 
 yaml_text <-
 "name: Docker Image CI - %s
 on:
   workflow_dispatch: null
   push:
-    paths: ['proj_%s.Dockerfile', '.github/workflows/docker-%s.yml', 'install_cmake_version_proj.sh']
+    paths: ['dockerfiles/proj_%s.Dockerfile', '.github/workflows/docker-%s.yml', 'install_cmake_version_proj.sh']
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,7 +27,7 @@ jobs:
           password: ${{secrets.GITHUB_TOKEN}}
       - name: Build the (%s) Docker image
         if: github.repository == 'mdsumner/proj-builds'
-        run: docker build -f proj_%s.Dockerfile . --tag ghcr.io/mdsumner/proj-builds:%s
+        run: docker build -f dockerfiles/proj_%s.Dockerfile . --tag ghcr.io/mdsumner/proj-builds:%s
       - name: Publish (%s)
         if: github.repository == 'mdsumner/proj-builds'
         run: docker push ghcr.io/mdsumner/proj-builds:%s

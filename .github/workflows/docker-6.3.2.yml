@@ -2,7 +2,7 @@ name: Docker Image CI - 6.3.2
 on:
   workflow_dispatch: null
   push:
-    paths: ['proj_6.3.2.Dockerfile', '.github/workflows/docker-6.3.2.yml', 'install_cmake_version_proj.sh']
+    paths: ['dockerfiles/proj_6.3.2.Dockerfile', '.github/workflows/docker-6.3.2.yml', 'install_cmake_version_proj.sh']
 jobs:
   build:
     runs-on: ubuntu-latest
