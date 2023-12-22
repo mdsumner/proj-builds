@@ -1,0 +1,25 @@
+name: Docker Image CI - R on PROJ
+on:
+  workflow_dispatch: null
+  push:
+    paths: ['Dockerfile', '.github/workflows/docker.yml', 'install_R_source.sh']
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - uses: actions/checkout@v3
+      - name: Login to GitHub Container Registry
+        if: github.repository == 'mdsumner/proj-builds'
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{github.actor}}
+          password: ${{secrets.GITHUB_TOKEN}}
+      - name: Build the (PROJ and R) Docker image
+        if: github.repository == 'mdsumner/proj-builds'
+        run: docker build -f dockerfiles/Dockerfile . --tag ghcr.io/mdsumner/proj-builds:R_PROJ
+      - name: Publish (R_PROJ)
+        if: github.repository == 'mdsumner/proj-builds'
+        run: docker push ghcr.io/mdsumner/proj-builds:R_PROJ
+
