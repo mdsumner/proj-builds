@@ -102,3 +102,7 @@ rm -rf /tmp/downloaded_packages
 echo -e "Check proj package...\n"
 proj
 echo -e "\nInstall PROJ, done!"
+
+Rscript -e 'install.packages(c("wk", "hunspell", "spelling", "lifecycle", "devtools"))
+
+
