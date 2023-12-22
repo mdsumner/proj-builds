@@ -18,7 +18,7 @@ jobs:
           password: ${{secrets.GITHUB_TOKEN}}
       - name: Build the (latest) Docker image
         if: github.repository == 'mdsumner/proj-builds'
-        run: docker build -f proj_latest.Dockerfile . --tag ghcr.io/mdsumner/proj-builds:latest
+        run: docker build -f dockerfiles/proj_latest.Dockerfile . --tag ghcr.io/mdsumner/proj-builds:latest
       - name: Publish (latest)
         if: github.repository == 'mdsumner/proj-builds'
         run: docker push ghcr.io/mdsumner/proj-builds:latest
