@@ -71,7 +71,7 @@ rm -rf  proj*
 # https://download.osgeo.org/proj/
 if [ "$PROJ_VERSION" = "latest" ]; then
     PROJ_DL_URL=$(url_latest_gh_released_asset "OSGeo/PROJ")
-elif [ "$PROJ_VERSION" = "master" ]; then
+elif [ "$PROJ_VERSION" = "devel" ]; then
     PROJ_DL_URL="https://github.com/OSGEO/proj/archive/master.tar.gz"
 else
     PROJ_DL_URL="https://download.osgeo.org/proj/proj-${PROJ_VERSION}.tar.gz"
