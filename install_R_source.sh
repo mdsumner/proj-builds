@@ -21,6 +21,8 @@ source /etc/os-release
 apt-get update
 apt-get -y install locales
 
+apt-get -y install git wget
+
 ## Configure default locale
 LANG=${LANG:-"en_US.UTF-8"}
 /usr/sbin/locale-gen --lang "${LANG}"

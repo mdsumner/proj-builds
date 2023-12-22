@@ -15,7 +15,6 @@ COPY install_R_source.sh /scripts/install_R_source.sh
 
 RUN /scripts/install_R_source.sh
 
-RUN apt-get install git wget
 ENV CRAN=https://cloud.r-project.org
 ENV LANG=en_US.UTF-8
 
