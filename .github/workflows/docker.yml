@@ -18,7 +18,7 @@ jobs:
           password: ${{secrets.GITHUB_TOKEN}}
       - name: Build the (PROJ and R) Docker image
         if: github.repository == 'mdsumner/proj-builds'
-        run: docker build -f dockerfiles/Dockerfile . --tag ghcr.io/mdsumner/proj-builds:R_PROJ
+        run: docker build  . --tag ghcr.io/mdsumner/proj-builds:R_PROJ
       - name: Publish (R_PROJ)
         if: github.repository == 'mdsumner/proj-builds'
         run: docker push ghcr.io/mdsumner/proj-builds:R_PROJ
