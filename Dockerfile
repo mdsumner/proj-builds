@@ -18,7 +18,7 @@ RUN /scripts/install_R_source.sh
 ENV CRAN=https://cloud.r-project.org
 ENV LANG=en_US.UTF-8
 
-COPY setup_R.sh /scripts/setup_r.sh
+COPY setup_R.sh /scripts/setup_R.sh
 
 RUN /scripts/setup_R.sh
 

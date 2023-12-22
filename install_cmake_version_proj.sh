@@ -54,6 +54,7 @@ apt-get install -y --fix-missing --no-install-recommends \
     git \
     libcrypto++-dev \
     libcurl4-openssl-dev \
+    libfontconfig1-dev \
     libsqlite3-dev \
     libssl-dev \
     libtiff5-dev \
