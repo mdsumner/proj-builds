@@ -15,11 +15,12 @@ COPY install_R_source.sh /scripts/install_R_source.sh
 
 RUN /scripts/install_R_source.sh
 
-#ENV CRAN=https://cloud.r-project.org
-#ENV LANG=en_US.UTF-8
+RUN apt-get install git wget
+ENV CRAN=https://cloud.r-project.org
+ENV LANG=en_US.UTF-8
 
-#COPY scripts /rocker_scripts
+COPY setup_R.sh /scripts/setup_r.sh
 
-#RUN /rocker_scripts/setup_R.sh
+RUN /scripts/setup_R.sh
 
 #CMD ["R"]
