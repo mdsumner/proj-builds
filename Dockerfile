@@ -23,4 +23,7 @@ COPY setup_R.sh /scripts/setup_r.sh
 
 RUN /scripts/setup_R.sh
 
+RUN git clone https://github.com/anthonynorth/PROJ.git
+
+
 #CMD ["R"]
