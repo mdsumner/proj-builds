@@ -1,8 +1,8 @@
-name: Docker Image CI - devel
+name: Docker Image CI - 6.3.2
 on:
   workflow_dispatch: null
   push:
-    paths: ['proj_devel.Dockerfile', '.github/workflows/docker-devel.yml', 'install_version_proj.sh']
+    paths: ['proj_6.3.2.Dockerfile', '.github/workflows/docker-6.3.2.yml', 'install_version_proj.sh']
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,9 +16,9 @@ jobs:
           registry: ghcr.io
           username: ${github.actor}
           password: ${secrets.GITHUB_TOKEN}
-      - name: Build the (devel) Docker image
+      - name: Build the (6.3.2) Docker image
         if: github.repository == 'mdsumner/proj-builds'
-        run: docker build . --tag ghcr.io/mdsumner/proj-builds:devel
-      - name: Publish (devel)
+        run: docker build . --tag ghcr.io/mdsumner/proj-builds:6.3.2
+      - name: Publish (6.3.2)
         if: github.repository == 'mdsumner/proj-builds'
-        run: docker push ghcr.io/mdsumner/proj-builds:devel
+        run: docker push ghcr.io/mdsumner/proj-builds:6.3.2
