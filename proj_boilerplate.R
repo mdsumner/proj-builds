@@ -39,6 +39,7 @@ docker_text <-
 LABEL org.opencontainers.image.licenses="GPL-2.0-or-later" \\
       org.opencontainers.image.source="https://github.com/mdsumner/proj-builds" \\
       org.opencontainers.image.vendor="Hypertidy Project" \\
+      org.opencontainers.image.description="A build of PROJ %s for use on ubuntu" \\
       org.opencontainers.image.authors="Michael Sumner <mdsumner@gmail.com>"
 
 ENV PROJ_VERSION=%s
@@ -48,7 +49,7 @@ COPY install_cmake_version_proj.sh /scripts/install_cmake_version_proj.sh
 RUN /scripts/install_cmake_version_proj.sh
 '
 
-tx1 <- sprintf(docker_text, label)
+tx1 <- sprintf(docker_text, label, label)
 tx2 <- sprintf(yaml_text, label, label, label, label, label, label, label, label)
 p1 <- sprintf(dockerfile_path, label)
 p2 <- sprintf(yamlfile_path, label)
