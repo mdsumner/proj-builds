@@ -10,6 +10,69 @@ Dockerfiles and github action yaml is templated from PROJ releases (6.3.2, 9.3.1
 
 The containers are listed on [packages](https://github.com/mdsumner/proj-builds/pkgs/container/proj-builds).
 
+At time of writing (December 2023) the following labels are available: 
+
+
+devel
+
+latest
+
+9.3.1
+
+9.3.0
+
+9.2.1
+
+9.2.0
+
+9.1.1
+
+9.1.0
+
+9.0.1
+
+9.0.0
+
+8.2.1
+
+8.2.0
+
+8.1.1
+
+8.1.0
+
+8.0.1
+
+8.0.0
+
+7.2.1
+
+7.2.0
+
+7.1.1
+
+7.1.0
+
+7.0.1
+
+7.0.0 - Not this one, not working
+
+6.3.2
+
+6.3.1
+
+6.3.0
+
+6.2.1
+
+6.2.0
+
+6.1.1
+
+6.1.0
+
+6.0.0
+
 Run bash in a container like this: 
 
 Specific version: 
