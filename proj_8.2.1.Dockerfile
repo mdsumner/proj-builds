@@ -10,3 +10,4 @@ ENV PROJ_VERSION=8.2.1
 COPY install_cmake_version_proj.sh /scripts/install_cmake_version_proj.sh
 
 RUN /scripts/install_cmake_version_proj.sh
+

@@ -10,3 +10,4 @@ ENV PROJ_VERSION=latest
 COPY install_cmake_version_proj.sh /scripts/install_cmake_version_proj.sh
 
 RUN /scripts/install_cmake_version_proj.sh
+
